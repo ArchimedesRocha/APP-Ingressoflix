@@ -1,6 +1,5 @@
 'use client'
 
-// Components
 import ButtonPrimary from '../../Buttons/index';
 import Section from './style';
 
@@ -13,4 +12,4 @@ const SectionHero = () => {
   )
 }
 
-export default SectionHero
+export default SectionHero;
