@@ -29,6 +29,7 @@ img {
 }
 
 html {
+  width: 100vw;
   background: #020916;
   font-size: 62.5%;
   overflow-x: hidden;

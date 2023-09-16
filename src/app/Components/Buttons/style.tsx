@@ -1,37 +1,37 @@
 import styled from "styled-components";
 
-const ButtonPrimary = styled.button`
-  width:240px;
+const ButtonPrimaryStyled = styled.button`
+  width:24rem;
   background-color: #020916;
   color: #fff;
-  padding: 20px;
-  border: 1px solid #fff;
-  border-radius: 50px;
+  padding: 2rem;
+  border: 0.1rem solid #fff;
+  border-radius: 5rem;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 1.6rem;
   text-transform: uppercase;
   transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: #0050d2;
+    background-color: #3CB6FF;
   }
 
   &.dark-mode {
     background-color: #fff;
-    border: 1px solid #020916;
+    border: 0.1rem solid #020916;
     color: #020916;
-    padding: 20px;
-    border-radius: 50px;
+    padding: 2rem;
+    border-radius: 5rem;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1.6rem;
     transition: background-color 0.3s ease;
 
     &:hover {
-      background-color: #0050d2;
+      background-color: #3CB6FF;
       color: #fff;
-      border: 1px solid #fff;
+      border: 0.1rem solid #fff;
     }
   }
 `
 
-export default ButtonPrimary;
+export default ButtonPrimaryStyled;

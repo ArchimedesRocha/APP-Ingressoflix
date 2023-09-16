@@ -1,10 +1,19 @@
 import styled from "styled-components";
 
-import banner from '../../../../assets/images/banner/banner-home.png';
+const SectionHeroStyled = styled.section`
+  width: 100vw;
+  height: 75rem;
 
-const Section = styled.section`
-  background-image: url(${banner});
-  h1 {
+  background-image: url(images/banner/banner-home.png);
+  background-size:cover;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  .container {
+    width: 121.5rem;
+    padding-top: 18.6rem;
+    h1 {
     width: 52.5rem;
     color: #FFF;
     font-family: Monomaniac One;
@@ -12,7 +21,9 @@ const Section = styled.section`
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    margin-bottom: 6.4rem;
+  }
   }
 `;
 
-export default Section;
+export default SectionHeroStyled;

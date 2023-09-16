@@ -1,12 +1,20 @@
 'use client'
 
 import React from 'react';
-import ButtonPrimary from './style';
+import ButtonPrimaryStyled from './style';
+import { useRouter } from 'next/navigation'
 
-const Button = () => {
+const ButtonPrimary = () => {
+  const router = useRouter()
+
   return (
-    <ButtonPrimary className='dark-mode'>Crie um evento</ButtonPrimary>
+    <ButtonPrimaryStyled
+      type="button"
+      onClick={() => router.push('/event')}
+    >
+      Crie um evento
+    </ButtonPrimaryStyled>
   );
 }
 
-export default Button;
+export default ButtonPrimary;
