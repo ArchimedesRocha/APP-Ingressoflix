@@ -1,7 +1,8 @@
 'use client'
 
-import SectionHero from './SectionHero/index';
-import SearchFilter from './SearchFilter/index';
+import SectionHero from './SectionHero';
+import SearchFilter from './SearchFilter';
+import SectionEvents from './SectionEvents';
 
 const PageHome = () => {
 
@@ -9,6 +10,7 @@ const PageHome = () => {
     <>
       <SectionHero />
       <SearchFilter />
+      <SectionEvents />
     </>
   )
 }

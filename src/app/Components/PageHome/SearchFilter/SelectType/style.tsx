@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-const SelectCategoryStyled = styled.div`
+const SelectTypeStyled = styled.div`
 
-.select-category__control{
+.select-type__control{
   width: 30rem;
   padding: 1.25rem 3.2rem;
 
@@ -13,21 +13,21 @@ const SelectCategoryStyled = styled.div`
   color: #FFF;
 
   cursor: pointer;
-  
+
   font-size:1.8rem;
 
-.select-category__value-container{
-  .select-category__single-value{
-    color: #fff;  
+.select-type__value-container{
+  .select-type__single-value{
+    color: #fff;   
     font-size:1.8rem;
   }
 }
 
-.select-category__indicators{
-  .select-category__indicator-separator{
+.select-type__indicators{
+  .select-type__indicator-separator{
     background-color: #fff;
   }
-  .select-category__dropdown-indicator{
+  .select-type__dropdown-indicator{
     svg{
       fill:#fff;
       stroke:#fff;
@@ -35,7 +35,7 @@ const SelectCategoryStyled = styled.div`
   }
 }
 
-.select-category__placeholder {    
+.select-type__placeholder {    
   color: #FFF;
 }
 }
@@ -45,25 +45,25 @@ const SelectCategoryStyled = styled.div`
   padding: 1.25rem 3.2rem;
 
   border-radius: 5rem;
-  border: 1px solid #3CB6FF;
+  border: 0.1rem solid #3CB6FF;
 
   background-color: transparent;
   color: #3CB6FF;
-
+  
   font-size:1.8rem;
 
-  .select-category__value-container{
-    .select-category__single-value{
-      color: #3CB6FF;
+  .select-type__value-container{
+    .select-type__single-value{
+      color: #3CB6FF;      
       font-size:1.8rem;
     }
   }
   
-  .select-category__indicators{
-    .select-category__indicator-separator{
+  .select-type__indicators{
+    .select-type__indicator-separator{
       background-color: #3CB6FF;
     }
-    .select-category__dropdown-indicator{
+    .select-type__dropdown-indicator{
       svg{
         fill:#3CB6FF;
         stroke:#3CB6FF;
@@ -71,29 +71,26 @@ const SelectCategoryStyled = styled.div`
     }
   }
 
-  .select-category__placeholder {    
+  .select-type__placeholder {    
     color: #3CB6FF;
   }
 }
 
-.select-category{
+.select-type{
   &__menu{
   border: 0.1rem solid rgba(60, 183, 255, 0.2);
   border-radius: .8rem;
 
-  background-color: #020916;
+  background-color: transparent;
   color: #3CB6FF;
   
   cursor: pointer;
 
   font-size:1.8rem;
 
-  position: fixed;
-  z-index: 1;
-
   &-list::-webkit-scrollbar {
     width: 0.4rem;
-    height: 0px;
+    height: 0;
   }
   &-list::-webkit-scrollbar-track {
     background: #020916;
@@ -109,8 +106,7 @@ const SelectCategoryStyled = styled.div`
 
 &__option {
     background-color: transparent;
-    cursor: pointer;
-    
+    cursor: pointer;      
     font-size:1.8rem;
 
     &--is-focused {
@@ -123,4 +119,4 @@ const SelectCategoryStyled = styled.div`
   }
 }
 `
-export default SelectCategoryStyled;
+export default SelectTypeStyled;

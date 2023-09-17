@@ -1,6 +1,7 @@
 // Components
-import ButtonSearch from './ButtonSearch/index'
-import SelectCategory from './SelectCategory/index';
+import ButtonSearch from './ButtonSearch'
+import SelectCategory from './SelectCategory';
+import SelectType from './SelectType';
 
 // Style
 import SearchFilterStyled from './style';
@@ -11,6 +12,7 @@ const SearchFilter = () => {
     <SearchFilterStyled>
       <div className="container">
         <ButtonSearch />
+        <SelectType />
         <SelectCategory />
       </div>
     </SearchFilterStyled>

@@ -1,4 +1,7 @@
+// Imports
 import { useState } from 'react';
+
+// Styles
 import ButtonSearchStyled from './style';
 const ButtonSearch = () => {
 
@@ -30,10 +33,10 @@ const ButtonSearch = () => {
         </div>
         <button>
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="10" cy="10" r="7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-            <circle cx="10" cy="10" r="7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M21 21L15 15" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M21 21L15 15" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <circle cx="10" cy="10" r="7" />
+            <circle cx="10" cy="10" r="7" />
+            <path d="M21 21L15 15" />
+            <path d="M21 21L15 15" />
           </svg>
         </button>
       </div>

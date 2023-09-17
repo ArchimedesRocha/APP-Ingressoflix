@@ -2,17 +2,16 @@ import styled from "styled-components";
 
 const SectionHeroStyled = styled.section`
   width: 100vw;
-  height: 75rem;
+  height: 100vh;
 
   background-image: url(images/banner/banner-home.png);
   background-size:cover;
 
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   .container {
     width: 121.5rem;
-    padding-top: 18.6rem;
     h1 {
     width: 52.5rem;
     color: #FFF;

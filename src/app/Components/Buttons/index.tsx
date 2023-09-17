@@ -4,15 +4,20 @@ import React from 'react';
 import ButtonPrimaryStyled from './style';
 import { useRouter } from 'next/navigation'
 
-const ButtonPrimary = () => {
+interface Props {
+  text: string
+  route: string
+}
+
+const ButtonPrimary = ({ text, route }: Props) => {
   const router = useRouter()
 
   return (
     <ButtonPrimaryStyled
       type="button"
-      onClick={() => router.push('/event')}
+      onClick={() => router.push(`${route}`)}
     >
-      Crie um evento
+      {text}
     </ButtonPrimaryStyled>
   );
 }

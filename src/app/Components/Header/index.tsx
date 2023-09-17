@@ -1,8 +1,11 @@
 'use client'
 
+// Imports
 import Link from 'next/link';
-import HeaderStyled from './style'
-import Image from 'next/image'
+import Image from 'next/image';
+
+// Styles
+import HeaderStyled from './style';
 
 const Header = () => {
   return (
@@ -14,6 +17,7 @@ const Header = () => {
             width={300}
             height={90}
             alt="logo ingressoflix"
+            priority={true}
           />
         </Link>
       </div>

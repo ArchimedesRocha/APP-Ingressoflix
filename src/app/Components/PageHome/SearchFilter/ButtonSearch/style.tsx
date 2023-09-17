@@ -14,6 +14,8 @@ const ButtonSearchStyled = styled.div`
       
       transition: all 0.3s;
 
+      position: relative;
+
       .input{
         width: 100%;
         position:relative;
@@ -21,7 +23,7 @@ const ButtonSearchStyled = styled.div`
           position: absolute;
           top:0;
           
-          font-size: 1.6rem;
+          font-size: 1.8rem;
           color: #fff;
 
           transition: all 0.3s;
@@ -30,7 +32,7 @@ const ButtonSearchStyled = styled.div`
           width: 100%;
           background-color: transparent;
           
-          font-size: 1.6rem;
+          font-size: 1.8rem;
           color: #fff;          
 
           box-shadow: 0 0 0 0;
@@ -40,11 +42,18 @@ const ButtonSearchStyled = styled.div`
           transition: all 0.3s;
         }
       }
+
       svg {
-        width: 2.4rem;
-        height: 2.4rem;
+        width: 4.4rem;
+        height: 4.4rem;
         stroke: #fff;
         transition: all 0.3s;
+        background-color: transparent;
+        border-radius: 50%;
+        padding: .8rem;
+        position: absolute;
+        right: 3.2rem;
+        top: .7rem;
       }
 
       &.focused {
@@ -72,6 +81,13 @@ const ButtonSearchStyled = styled.div`
         }
         svg {
           stroke: #3CB6FF;
+          background-color: transparent;
+          border: 0.1rem solid #3CB6FF;
+          right: .8rem;
+          &:hover {            
+          stroke: #fff;
+          background-color: #3CB6FF;
+          }
         }
       }
     }
