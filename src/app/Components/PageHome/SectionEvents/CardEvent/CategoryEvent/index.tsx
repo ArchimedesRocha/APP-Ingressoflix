@@ -18,20 +18,33 @@ interface Props {
 
 // Limit Text
 const TitleEvent = ({ text, maxLength }: Props) => {
-  const [displayText, setDisplayText] = useState(text);
+  const [displayTitle, setDisplayTitle] = useState(text);
 
   useEffect(() => {
     if (text.length > maxLength) {
-      setDisplayText(text.slice(0, maxLength) + '...');
+      setDisplayTitle(text.slice(0, maxLength) + '...');
     }
   }, [text, maxLength]);
 
-  return <h3>{displayText}</h3>;
+  return <h3>{displayTitle}</h3>;
+};
+
+const NeighborhoodEvent = ({ text, maxLength }: Props) => {
+  const [displayNeighborhood, setDisplayNeighborhood] = useState(text);
+
+  useEffect(() => {
+    if (text.length > maxLength) {
+      setDisplayNeighborhood(text.slice(0, maxLength) + '...');
+    }
+  }, [text, maxLength]);
+
+  return <p>{displayNeighborhood}</p>;
 };
 
 const CategoryEvent = () => {
 
   const limitTitle = 'III Seminário de nutricionistas do estado de Mato Grosso do Sul';
+  const limitNeighborhood = 'Parque de exposições do Jaraguá';
 
   return (
     <CategoryEventStyled>
@@ -48,12 +61,17 @@ const CategoryEvent = () => {
         <SwiperSlide>
           <Link href='/single-event'>
             <div className="category-cards">
-              <Image
-                width={288}
-                height={193}
-                src="/images/events/category-crongress-and-seminar/congressos-e-seminarios-1.png"
-                alt="imagem do evento"
-              />
+              <div className="eventImage">
+                <Image
+                  width={288}
+                  height={193}
+                  src="/images/events/category-crongress-and-seminar/congressos-e-seminarios-1.png"
+                  alt="imagem do evento"
+                />
+                <div className="eventTag">
+                  <p>Gratuito</p>
+                </div>
+              </div>
               <div className="details">
                 <div className="excerpt">
                   <TitleEvent text={limitTitle} maxLength={58} />
@@ -67,7 +85,7 @@ const CategoryEvent = () => {
                         src="/images/icon/icon-location-white.svg"
                         alt="icone de localização"
                       />
-                      <p>Parque de exposições</p>
+                      <NeighborhoodEvent text={limitNeighborhood} maxLength={20} />
                     </div>
                     <div className="date">
                       <div className="day">
@@ -97,12 +115,14 @@ const CategoryEvent = () => {
         <SwiperSlide>
           <Link href='/single-event'>
             <div className="category-cards">
-              <Image
-                width={288}
-                height={193}
-                src="/images/events/category-crongress-and-seminar/congressos-e-seminarios-1.png"
-                alt="imagem do evento"
-              />
+              <div className="eventImage">
+                <Image
+                  width={288}
+                  height={193}
+                  src="/images/events/category-crongress-and-seminar/congressos-e-seminarios-1.png"
+                  alt="imagem do evento"
+                />
+              </div>
               <div className="details">
                 <div className="excerpt">
                   <TitleEvent text={limitTitle} maxLength={58} />
@@ -116,7 +136,7 @@ const CategoryEvent = () => {
                         src="/images/icon/icon-location-white.svg"
                         alt="icone de localização"
                       />
-                      <p>Parque de exposições</p>
+                      <NeighborhoodEvent text={limitNeighborhood} maxLength={20} />
                     </div>
                     <div className="date">
                       <div className="day">
@@ -146,12 +166,17 @@ const CategoryEvent = () => {
         <SwiperSlide>
           <Link href='/single-event'>
             <div className="category-cards">
-              <Image
-                width={288}
-                height={193}
-                src="/images/events/category-crongress-and-seminar/congressos-e-seminarios-1.png"
-                alt="imagem do evento"
-              />
+              <div className="eventImage">
+                <Image
+                  width={288}
+                  height={193}
+                  src="/images/events/category-crongress-and-seminar/congressos-e-seminarios-1.png"
+                  alt="imagem do evento"
+                />
+                <div className="eventTag">
+                  <p>Gratuito</p>
+                </div>
+              </div>
               <div className="details">
                 <div className="excerpt">
                   <TitleEvent text={limitTitle} maxLength={58} />
@@ -165,7 +190,7 @@ const CategoryEvent = () => {
                         src="/images/icon/icon-location-white.svg"
                         alt="icone de localização"
                       />
-                      <p>Parque de exposições</p>
+                      <NeighborhoodEvent text={limitNeighborhood} maxLength={20} />
                     </div>
                     <div className="date">
                       <div className="day">
@@ -195,12 +220,14 @@ const CategoryEvent = () => {
         <SwiperSlide>
           <Link href='/single-event'>
             <div className="category-cards">
-              <Image
-                width={288}
-                height={193}
-                src="/images/events/category-crongress-and-seminar/congressos-e-seminarios-1.png"
-                alt="imagem do evento"
-              />
+              <div className="eventImage">
+                <Image
+                  width={288}
+                  height={193}
+                  src="/images/events/category-crongress-and-seminar/congressos-e-seminarios-1.png"
+                  alt="imagem do evento"
+                />
+              </div>
               <div className="details">
                 <div className="excerpt">
                   <TitleEvent text={limitTitle} maxLength={58} />
@@ -214,7 +241,7 @@ const CategoryEvent = () => {
                         src="/images/icon/icon-location-white.svg"
                         alt="icone de localização"
                       />
-                      <p>Parque de exposições</p>
+                      <NeighborhoodEvent text={limitNeighborhood} maxLength={20} />
                     </div>
                     <div className="date">
                       <div className="day">
@@ -244,12 +271,14 @@ const CategoryEvent = () => {
         <SwiperSlide>
           <Link href='/single-event'>
             <div className="category-cards">
-              <Image
-                width={288}
-                height={193}
-                src="/images/events/category-crongress-and-seminar/congressos-e-seminarios-1.png"
-                alt="imagem do evento"
-              />
+              <div className="eventImage">
+                <Image
+                  width={288}
+                  height={193}
+                  src="/images/events/category-crongress-and-seminar/congressos-e-seminarios-1.png"
+                  alt="imagem do evento"
+                />
+              </div>
               <div className="details">
                 <div className="excerpt">
                   <TitleEvent text={limitTitle} maxLength={58} />
@@ -263,7 +292,7 @@ const CategoryEvent = () => {
                         src="/images/icon/icon-location-white.svg"
                         alt="icone de localização"
                       />
-                      <p>Parque de exposições</p>
+                      <NeighborhoodEvent text={limitNeighborhood} maxLength={20} />
                     </div>
                     <div className="date">
                       <div className="day">
@@ -293,12 +322,14 @@ const CategoryEvent = () => {
         <SwiperSlide>
           <Link href='/single-event'>
             <div className="category-cards">
-              <Image
-                width={288}
-                height={193}
-                src="/images/events/category-crongress-and-seminar/congressos-e-seminarios-1.png"
-                alt="imagem do evento"
-              />
+              <div className="eventImage">
+                <Image
+                  width={288}
+                  height={193}
+                  src="/images/events/category-crongress-and-seminar/congressos-e-seminarios-1.png"
+                  alt="imagem do evento"
+                />
+              </div>
               <div className="details">
                 <div className="excerpt">
                   <TitleEvent text={limitTitle} maxLength={58} />
@@ -312,7 +343,7 @@ const CategoryEvent = () => {
                         src="/images/icon/icon-location-white.svg"
                         alt="icone de localização"
                       />
-                      <p>Parque de exposições</p>
+                      <NeighborhoodEvent text={limitNeighborhood} maxLength={20} />
                     </div>
                     <div className="date">
                       <div className="day">
@@ -342,12 +373,14 @@ const CategoryEvent = () => {
         <SwiperSlide>
           <Link href='/single-event'>
             <div className="category-cards">
-              <Image
-                width={288}
-                height={193}
-                src="/images/events/category-crongress-and-seminar/congressos-e-seminarios-1.png"
-                alt="imagem do evento"
-              />
+              <div className="eventImage">
+                <Image
+                  width={288}
+                  height={193}
+                  src="/images/events/category-crongress-and-seminar/congressos-e-seminarios-1.png"
+                  alt="imagem do evento"
+                />
+              </div>
               <div className="details">
                 <div className="excerpt">
                   <TitleEvent text={limitTitle} maxLength={58} />
@@ -361,7 +394,7 @@ const CategoryEvent = () => {
                         src="/images/icon/icon-location-white.svg"
                         alt="icone de localização"
                       />
-                      <p>Parque de exposições</p>
+                      <NeighborhoodEvent text={limitNeighborhood} maxLength={20} />
                     </div>
                     <div className="date">
                       <div className="day">
@@ -391,12 +424,14 @@ const CategoryEvent = () => {
         <SwiperSlide>
           <Link href='/single-event'>
             <div className="category-cards">
-              <Image
-                width={288}
-                height={193}
-                src="/images/events/category-crongress-and-seminar/congressos-e-seminarios-1.png"
-                alt="imagem do evento"
-              />
+              <div className="eventImage">
+                <Image
+                  width={288}
+                  height={193}
+                  src="/images/events/category-crongress-and-seminar/congressos-e-seminarios-1.png"
+                  alt="imagem do evento"
+                />
+              </div>
               <div className="details">
                 <div className="excerpt">
                   <TitleEvent text={limitTitle} maxLength={58} />
@@ -410,7 +445,7 @@ const CategoryEvent = () => {
                         src="/images/icon/icon-location-white.svg"
                         alt="icone de localização"
                       />
-                      <p>Parque de exposições</p>
+                      <NeighborhoodEvent text={limitNeighborhood} maxLength={20} />
                     </div>
                     <div className="date">
                       <div className="day">

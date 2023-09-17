@@ -23,6 +23,28 @@ const CategoryEventStyled = styled.div`
 
     transition: all 0.3s;
 
+    .eventImage {
+      position: relative;
+      .eventTag{
+        width: 100%;
+
+        position: absolute;
+        left:0;
+        bottom:0;
+        
+        background-color: rgba(40, 199, 111, 1);
+        color: white;
+
+        font-family: 'Mohave', sans-serif;
+        font-size: 1.4rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        text-align: center;
+        
+        padding: .2rem;
+      }
+    }
+
     .details {
       margin: 1.2rem .8rem .8rem .8rem;
       .excerpt {
