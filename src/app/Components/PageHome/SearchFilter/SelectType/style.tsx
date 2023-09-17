@@ -77,6 +77,7 @@ const SelectTypeStyled = styled.div`
 }
 
 .select-type{
+  position: relative;
   &__menu{
   border: 0.1rem solid rgba(60, 183, 255, 0.2);
   border-radius: .8rem;
@@ -87,6 +88,9 @@ const SelectTypeStyled = styled.div`
   cursor: pointer;
 
   font-size:1.8rem;
+
+  position: absolute;
+  z-index: 2;
 
   &-list::-webkit-scrollbar {
     width: 0.4rem;

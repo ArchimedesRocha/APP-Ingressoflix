@@ -38,7 +38,7 @@ const SelectCategory = () => {
   return (
     <SelectCategoryStyled>
       <Select
-        key="select-component"
+        key="select-component-category"
         value={selectedOptionCategory}
         onChange={handleSelectChangeCategory}
         options={options}

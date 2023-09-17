@@ -32,7 +32,7 @@ const SelectType = () => {
   return (
     <SelectTypeStyled>
       <Select
-        key="select-component"
+        key="select-component-type"
         value={selectedOptionType}
         onChange={handleSelectChangeType}
         options={options}
