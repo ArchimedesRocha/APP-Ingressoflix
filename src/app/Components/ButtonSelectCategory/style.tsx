@@ -1,13 +1,28 @@
 import styled from "styled-components";
 
-const SelectCategoryStyled = styled.div`
+interface Props {
+  extraLarge?: boolean
+  large?: boolean
+  medium?: boolean
+  small?: boolean
+  disable?: boolean
+}
+
+const SelectCategoryStyled = styled.div<Props>`
 
 .select-category__control{
-  width: 30rem;
+  width: ${(props) => {
+    if (props.extraLarge) return '78rem';
+    if (props.large) return '58rem';
+    if (props.medium) return '30rem';
+    if (props.small) return '24rem';
+    return '100%';
+  }};
+  
   padding: 1.25rem 3.2rem;
 
   border-radius: 5rem;
-  border: 1px solid #FFF;
+  border: 1px solid ${(props) => props.disable ? '#4B465C' : '#FFF'};
 
   background-color: transparent;
   color: #FFF;
@@ -16,46 +31,49 @@ const SelectCategoryStyled = styled.div`
   
   font-size:1.8rem;
 
-.select-category__value-container{
-  .select-category__single-value{
-    color: #fff;  
-    font-size:1.8rem;
+  .select-category__value-container{
+    .select-category__single-value{
+      color: ${(props) => props.disable ? '#4B465C' : '#FFF'};  
+      font-size:1.8rem;
+    }
+  }
+
+  .select-category__indicators{
+    .select-category__indicator-separator{
+      background-color: ${(props) => props.disable ? '#4B465C' : '#FFF'};
+    }
+    .select-category__dropdown-indicator{
+      svg{
+        fill:${(props) => props.disable ? '#4B465C' : '#FFF'};
+        stroke:${(props) => props.disable ? '#4B465C' : '#FFF'};
+        transition: all .3s;
+      }
+    }
+  }
+
+  .select-category__placeholder {    
+    color: #FFF;
   }
 }
 
-.select-category__indicators{
-  .select-category__indicator-separator{
-    background-color: #fff;
-  }
-  .select-category__dropdown-indicator{
-    svg{
-      fill:#fff;
-      stroke:#fff;
+.select-category__control--menu-is-open {
+  .select-category__indicators{
+    .select-category__dropdown-indicator{
+      svg{
+        rotate: -180deg;
+      }
     }
   }
 }
 
-.select-category__placeholder {    
-  color: #FFF;
-}
-}
-
-.selected {  
-  width: 30rem;
-  padding: 1.25rem 3.2rem;
-
-  border-radius: 5rem;
+.selected {
   border: 1px solid #3CB6FF;
 
-  background-color: transparent;
   color: #3CB6FF;
-
-  font-size:1.8rem;
 
   .select-category__value-container{
     .select-category__single-value{
       color: #3CB6FF;
-      font-size:1.8rem;
     }
   }
   

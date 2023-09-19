@@ -1,61 +1,78 @@
 import styled from "styled-components";
 
-const SelectTypeStyled = styled.div`
+interface Props {
+  extraLarge?: boolean
+  large?: boolean
+  medium?: boolean
+  small?: boolean
+  disable?: boolean
+}
+
+const SelectTypeStyled = styled.div<Props>`
 
 .select-type__control{
-  width: 30rem;
+  width: ${(props) => {
+    if (props.extraLarge) return '78rem'
+    if (props.large) return '58rem'
+    if (props.medium) return '30rem'
+    if (props.small) return '24rem'
+    return '100%'
+  }};
+
   padding: 1.25rem 3.2rem;
 
   border-radius: 5rem;
-  border: 1px solid #FFF;
+  border: 1px solid ${(props) => props.disable ? '#4B465C' : '#FFF'};
 
   background-color: transparent;
-  color: #FFF;
+  color: ${(props) => props.disable ? '#4B465C' : '#FFF'};
 
   cursor: pointer;
 
   font-size:1.8rem;
 
-.select-type__value-container{
-  .select-type__single-value{
-    color: #fff;   
-    font-size:1.8rem;
+  .select-type__value-container{
+    .select-type__single-value{
+      color: ${(props) => props.disable ? '#4B465C' : '#FFF'};  
+      font-size:1.8rem;
+    }
+  }
+
+  .select-type__indicators{
+    .select-type__indicator-separator{
+      background-color: ${(props) => props.disable ? '#4B465C' : '#FFF'};
+    }
+    .select-type__dropdown-indicator{
+      svg{
+        fill:${(props) => props.disable ? '#4B465C' : '#FFF'};
+        stroke:${(props) => props.disable ? '#4B465C' : '#FFF'};
+        transition: all .3s;
+      }
+    }
+  }
+
+  .select-type__placeholder {    
+    color: #FFF;
   }
 }
 
-.select-type__indicators{
-  .select-type__indicator-separator{
-    background-color: #fff;
-  }
-  .select-type__dropdown-indicator{
-    svg{
-      fill:#fff;
-      stroke:#fff;
+.select-type__control--menu-is-open {
+  .select-type__indicators{
+    .select-type__dropdown-indicator{
+      svg{
+        rotate: -180deg;
+      }
     }
   }
 }
 
-.select-type__placeholder {    
-  color: #FFF;
-}
-}
-
-.selected {  
-  width: 30rem;
-  padding: 1.25rem 3.2rem;
-
-  border-radius: 5rem;
+.selected {
   border: 0.1rem solid #3CB6FF;
-
-  background-color: transparent;
   color: #3CB6FF;
-  
-  font-size:1.8rem;
 
   .select-type__value-container{
     .select-type__single-value{
-      color: #3CB6FF;      
-      font-size:1.8rem;
+      color: #3CB6FF;     
     }
   }
   

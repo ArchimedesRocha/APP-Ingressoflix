@@ -2,8 +2,12 @@
 import { useState } from 'react';
 
 // Styles
-import ButtonSearchStyled from './style';
-const ButtonSearch = () => {
+import ButtonCalendarStyled from './style';
+
+interface Props {
+  text: string
+}
+const ButtonCalendar = ({ text }: Props) => {
 
   const [search, setSearch] = useState('')
   const [isInputFocused, setInputFocused] = useState(false);
@@ -17,11 +21,11 @@ const ButtonSearch = () => {
   };
 
   return (
-    <ButtonSearchStyled>
+    <ButtonCalendarStyled medium>
       <div className={`input-search ${isInputFocused ? 'focused' : ''} ${search ? 'contain' : ''}`}>
         <div className="input">
           <label htmlFor="">
-            Buscar evento
+            {text}
           </label>
           <input
             type="text"
@@ -33,15 +37,16 @@ const ButtonSearch = () => {
         </div>
         <button>
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="10" cy="10" r="7" />
-            <circle cx="10" cy="10" r="7" />
-            <path d="M21 21L15 15" />
-            <path d="M21 21L15 15" />
+            <rect x="4" y="5" width="16" height="16" rx="2" />
+            <path d="M16 3V7" />
+            <path d="M8 3V7" />
+            <path d="M4 11H20" />
+            <path d="M10 16H14" />
           </svg>
         </button>
       </div>
-    </ButtonSearchStyled>
+    </ButtonCalendarStyled>
   )
 }
 
-export default ButtonSearch;
+export default ButtonCalendar;

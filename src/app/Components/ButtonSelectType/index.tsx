@@ -1,6 +1,6 @@
 // Imports
 import { useState } from "react";
-import Select, { ActionMeta } from 'react-select';
+import Select from 'react-select';
 
 // Style
 import SelectTypeStyled from "./style"
@@ -11,10 +11,14 @@ interface Option {
   label: string;
 }
 
-const SelectType = () => {
+interface Props {
+  textType: string;
+}
+
+const SelectType = ({ textType }: Props) => {
 
   const [selectedOptionType, setSelectedOptionType] = useState<Option | null>(
-    { value: 'select', label: 'Selecionar por tipo' }
+    { value: 'select', label: `${textType}` }
   );
 
   const options: Option[] = [
@@ -23,14 +27,13 @@ const SelectType = () => {
   ]
 
   const handleSelectChangeType = (
-    newValue: Option | null,
-    actionMeta: ActionMeta<Option>
+    newValue: Option | null
   ) => {
     setSelectedOptionType(newValue);
   }
 
   return (
-    <SelectTypeStyled>
+    <SelectTypeStyled medium disable>
       <Select
         key="select-component-type"
         value={selectedOptionType}

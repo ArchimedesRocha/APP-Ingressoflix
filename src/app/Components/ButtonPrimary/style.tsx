@@ -1,7 +1,20 @@
 import styled from "styled-components";
 
-const ButtonPrimaryStyled = styled.button`
-  width:24rem;
+interface Props {
+  extraLarge?: boolean,
+  large?: boolean,
+  medium?: boolean,
+  small?: boolean
+}
+
+const ButtonPrimaryStyled = styled.button<Props>`
+  width: ${(props) => {
+    if (props.extraLarge) return '78rem';
+    if (props.large) return '58rem';
+    if (props.medium) return '30rem';
+    if (props.small) return '24rem';
+    return '100%';
+  }};
   background-color: #020916;
   color: #fff;
   padding: 1.6rem;

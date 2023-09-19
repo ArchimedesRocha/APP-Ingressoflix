@@ -1,6 +1,6 @@
 // Imports
 import { useState } from "react";
-import Select, { ActionMeta } from 'react-select';
+import Select from 'react-select';
 
 // Style
 import SelectCategoryStyled from "./style"
@@ -11,10 +11,14 @@ interface Option {
   label: string;
 }
 
-const SelectCategory = () => {
+interface Props {
+  textCategory: string;
+}
+
+const SelectCategory = ({ textCategory }: Props) => {
 
   const [selectedOptionCategory, setSelectedOptionCategory] = useState<Option | null>(
-    { value: 'select', label: 'Selecionar por categoria' }
+    { value: 'select', label: `${textCategory}` }
   );
 
   const options: Option[] = [
@@ -29,14 +33,13 @@ const SelectCategory = () => {
   ]
 
   const handleSelectChangeCategory = (
-    newValue: Option | null,
-    actionMeta: ActionMeta<Option>
+    newValue: Option | null
   ) => {
     setSelectedOptionCategory(newValue);
   }
 
   return (
-    <SelectCategoryStyled>
+    <SelectCategoryStyled medium disable>
       <Select
         key="select-component-category"
         value={selectedOptionCategory}

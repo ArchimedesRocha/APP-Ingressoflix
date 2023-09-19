@@ -13,7 +13,7 @@ const ButtonPrimary = ({ text, route }: Props) => {
   const router = useRouter()
 
   return (
-    <ButtonPrimaryStyled
+    <ButtonPrimaryStyled small
       type="button"
       onClick={() => router.push(`${route}`)}
     >

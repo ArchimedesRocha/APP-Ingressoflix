@@ -73,7 +73,7 @@ const CategoryEventStyled = styled.div`
             }
           }
           .date {
-            width: 17rem;
+            width: 18rem;
             display: flex;
             align-items:center;
             gap: .4rem;

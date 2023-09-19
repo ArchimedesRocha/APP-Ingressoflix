@@ -1,16 +1,30 @@
 import styled from "styled-components";
 
-const ButtonSearchStyled = styled.div`
+interface Props {
+  extraLarge?: boolean;
+  large?: boolean;
+  medium?: boolean;
+  small?: boolean;
+}
+
+const ButtonSearchStyled = styled.div<Props>`
     .input-search{
       display: flex;
       align-items:center;
       gap: 1.6rem;
 
-      width: 58rem;
+      width: ${(props) => {
+    if (props.extraLarge) return '78rem';
+    if (props.large) return '58rem';
+    if (props.medium) return '30rem';
+    if (props.small) return '24rem';
+    return '100%';
+  }};
+
       padding: 1.6rem 3.2rem;
 
       border-radius: 5rem;
-      border: 0.1rem solid #FFF;
+      border: 0.1rem solid #4B465C;
       
       transition: all 0.3s;
 
@@ -24,7 +38,7 @@ const ButtonSearchStyled = styled.div`
           top:0;
           
           font-size: 1.8rem;
-          color: #fff;
+          color: #4B465C;
 
           transition: all 0.3s;
         }
@@ -33,7 +47,7 @@ const ButtonSearchStyled = styled.div`
           background-color: transparent;
           
           font-size: 1.8rem;
-          color: #fff;          
+          color: #4B465C;          
 
           box-shadow: 0 0 0 0;
           border: 0 none;
@@ -43,25 +57,35 @@ const ButtonSearchStyled = styled.div`
         }
       }
 
-      svg {
-        width: 4.4rem;
-        height: 4.4rem;
-        stroke: #fff;
-        transition: all 0.3s;
-        background-color: transparent;
-        border-radius: 50%;
-        padding: .8rem;
-        position: absolute;
-        right: 3.2rem;
-        top: .7rem;
+      button {
+        pointer-events:none;
+        svg {
+          width: 4.4rem;
+          height: 4.4rem;
+          stroke: #4B465C;
+          transition: all 0.3s;
+          background-color: transparent;
+          border-radius: 50%;
+          padding: .8rem;
+          position: absolute;
+          right: 3.2rem;
+          top: .7rem;
+        }
       }
 
       &.focused {
         position:relative;
+        border: 0.1rem solid #3CB6FF;
         .input {
           position: initial;
           label {
+            color: #3CB6FF;
             top:-3rem;      
+          }
+        }
+        button {
+          svg {
+            stroke: #3CB6FF;
           }
         }
       }
@@ -79,14 +103,17 @@ const ButtonSearchStyled = styled.div`
             color: #3CB6FF;
           }
         }
-        svg {
-          stroke: #3CB6FF;
-          background-color: transparent;
-          border: 0.1rem solid #3CB6FF;
-          right: .8rem;
-          &:hover {            
-          stroke: #fff;
-          background-color: #3CB6FF;
+        button {          
+          pointer-events:all;
+          svg {
+            stroke: #3CB6FF;
+            background-color: transparent;
+            border: 0.1rem solid #3CB6FF;
+            right: .8rem;
+            &:hover {            
+            stroke: #fff;
+            background-color: #3CB6FF;
+            }
           }
         }
       }
