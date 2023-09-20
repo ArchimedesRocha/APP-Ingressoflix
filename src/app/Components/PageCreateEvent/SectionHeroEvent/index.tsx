@@ -1,6 +1,6 @@
 // Components
-import ButtonSelectCategory from '../../ButtonSelectCategory';
-import ButtonSelectType from '../../ButtonSelectType';
+import ButtonSelectTypeCreateEvent from '../../ButtonSelectTypeCreateEvent';
+import ButtonSelectCategoryCreateEvent from '../../ButtonSelectCategoryCreateEvent';
 import Input from "../../Input";
 import ButtonSelectModality from "../../ButtonSelectModality";
 import ButtonCalendar from "../../ButtonCalendar";
@@ -21,8 +21,8 @@ const SectionHeroEvent = () => {
             <h2>Informações Gerais</h2>
             <div className="inputs">
               <Input text="Título do evento" />
-              <ButtonSelectType textType="Tipo do evento" />
-              <ButtonSelectCategory textCategory="Categoria do evento" />
+              <ButtonSelectTypeCreateEvent textType="Tipo do evento" />
+              <ButtonSelectCategoryCreateEvent textCategory="Categoria do evento" />
             </div>
             <div className="inputs">
               <Input text="URL do evento" />
