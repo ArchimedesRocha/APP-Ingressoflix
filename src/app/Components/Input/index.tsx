@@ -22,7 +22,7 @@ const Input = ({ text }: Props) => {
   }
 
   return (
-    <InputStyled large>
+    <InputStyled large='large'>
       <div className={`input ${titleIsFocused ? 'focused' : 'disable'} ${title ? 'contain' : ''}`}>
         <div className='title'>
           <label htmlFor="">

@@ -1,22 +1,22 @@
 import styled from "styled-components";
 
 interface Props {
-  extraLarge?: boolean
-  large?: boolean
-  medium?: boolean
-  small?: boolean
-  disable?: boolean
+  extra?: string
+  large?: string
+  medium?: string
+  small?: string
+  disable?: string
 }
 
 const SelectModalityStyled = styled.div<Props>`
 
 .select-modality__control{
   width: ${(props) => {
-    if (props.extraLarge) return '78rem'
+    if (props.extra) return '78rem'
     if (props.large) return '58rem'
     if (props.medium) return '30rem'
     if (props.small) return '24rem'
-    return '100%'
+    return 'fit-content'
   }};
 
   padding: 1.25rem 3.2rem;

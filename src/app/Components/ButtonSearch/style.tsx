@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 interface Props {
-  extraLarge?: boolean;
-  large?: boolean;
-  medium?: boolean;
-  small?: boolean;
+  extra?: string;
+  large?: string;
+  medium?: string;
+  small?: string;
 }
 
 const ButtonSearchStyled = styled.div<Props>`
@@ -14,7 +14,7 @@ const ButtonSearchStyled = styled.div<Props>`
       gap: 1.6rem;
 
       width: ${(props) => {
-    if (props.extraLarge) return '78rem';
+    if (props.extra) return '78rem';
     if (props.large) return '58rem';
     if (props.medium) return '30rem';
     if (props.small) return '24rem';

@@ -5,7 +5,7 @@ import { useState } from 'react';
 import ButtonSearchStyled from './style';
 
 interface Props {
-  text: string
+  text: string;
 }
 const ButtonSearch = ({ text }: Props) => {
 
@@ -21,7 +21,7 @@ const ButtonSearch = ({ text }: Props) => {
   };
 
   return (
-    <ButtonSearchStyled large>
+    <ButtonSearchStyled large='large'>
       <div className={`input-search ${isInputFocused ? 'focused' : ''} ${search ? 'contain' : ''}`}>
         <div className="input">
           <label htmlFor="">

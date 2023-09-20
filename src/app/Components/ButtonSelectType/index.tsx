@@ -33,7 +33,7 @@ const SelectType = ({ textType }: Props) => {
   }
 
   return (
-    <SelectTypeStyled medium disable>
+    <SelectTypeStyled medium='medium' disable='disable'>
       <Select
         key="select-component-type"
         value={selectedOptionType}

@@ -1,15 +1,15 @@
 import styled from "styled-components";
 
 interface Props {
-  extraLarge?: boolean,
-  large?: boolean,
-  medium?: boolean,
-  small?: boolean
+  extra?: string
+  large?: string
+  medium?: string
+  small?: string
 }
 
 const ButtonPrimaryStyled = styled.button<Props>`
   width: ${(props) => {
-    if (props.extraLarge) return '78rem';
+    if (props.extra) return '78rem';
     if (props.large) return '58rem';
     if (props.medium) return '30rem';
     if (props.small) return '24rem';

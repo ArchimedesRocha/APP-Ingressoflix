@@ -33,7 +33,7 @@ const SelectModality = ({ textModality }: Props) => {
   }
 
   return (
-    <SelectModalityStyled medium disable>
+    <SelectModalityStyled medium='medium' disable='disable'>
       <Select
         key="select-component-modality"
         value={selectedOptionModality}

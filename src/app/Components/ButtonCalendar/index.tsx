@@ -5,7 +5,7 @@ import { useState } from 'react';
 import ButtonCalendarStyled from './style';
 
 interface Props {
-  text: string
+  text: string;
 }
 const ButtonCalendar = ({ text }: Props) => {
 
@@ -21,7 +21,7 @@ const ButtonCalendar = ({ text }: Props) => {
   };
 
   return (
-    <ButtonCalendarStyled medium>
+    <ButtonCalendarStyled medium='medium'>
       <div className={`input-search ${isInputFocused ? 'focused' : ''} ${search ? 'contain' : ''}`}>
         <div className="input">
           <label htmlFor="">

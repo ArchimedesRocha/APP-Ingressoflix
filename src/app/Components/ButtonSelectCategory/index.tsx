@@ -39,7 +39,7 @@ const SelectCategory = ({ textCategory }: Props) => {
   }
 
   return (
-    <SelectCategoryStyled medium disable>
+    <SelectCategoryStyled medium='medium' disable='disable'>
       <Select
         key="select-component-category"
         value={selectedOptionCategory}
