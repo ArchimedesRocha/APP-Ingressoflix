@@ -6,9 +6,12 @@ interface Props {
   medium?: string
   small?: string
   disable?: string
+  isOnline?: boolean
 }
 
 const InputStyled = styled.div<Props>`
+pointer-events: ${(props) => props.isOnline ? 'all' : 'none'};
+
 .input {        
   width: ${(props) => {
     if (props.extra) return '78rem'

@@ -98,14 +98,13 @@ const SelectTypeStyled = styled.div<Props>`
   &__menu{
   border: 0.1rem solid rgba(60, 183, 255, 0.2);
   border-radius: .8rem;
-
-  background-color: transparent;
   color: #3CB6FF;
   
   cursor: pointer;
 
   font-size:1.8rem;
 
+  background-color: #020916;
   position: absolute;
   z-index: 2;
 
